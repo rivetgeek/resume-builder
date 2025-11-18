@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }} - {{ title }}</title>
+  <style>
+    @page {
+      margin: 0.75in;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+      color: #2d3748;
+      background: #fff;
+      line-height: 1.6;
+    }
+    .container {
+      width: 100%;
+      max-width: 8.5in;
+    }
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .header-left {
+      flex: 1;
+    }
+    h1 {
+      font-size: 26pt;
+      font-weight: 600;
+      margin-bottom: 0.2em;
+      color: #1a202c;
+      letter-spacing: -0.3px;
+    }
+    h2 {
+      font-size: 13pt;
+      font-weight: 600;
+      color: #2d3748;
+      margin-top: 1.5em;
+      margin-bottom: 0.6em;
+      padding-bottom: 0.4em;
+      border-bottom: 2px solid #4a5568;
+    }
+    h3 {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 0.3em;
+      margin-top: 0.6em;
+    }
+    .subtitle {
+      font-size: 12pt;
+      font-weight: 400;
+      color: #4a5568;
+      margin-bottom: 0;
+    }
+    .contact-bar {
+      text-align: right;
+      font-size: 9pt;
+      color: #4a5568;
+      line-height: 1.6;
+      min-width: 200px;
+    }
+    .contact-item {
+      display: block;
+      margin-bottom: 0.3em;
+    }
+    .section {
+      margin-bottom: 1.3em;
+    }
+    .section p {
+      margin: 0.5em 0;
+      text-align: left;
+    }
+    .job-block {
+      margin-bottom: 1.3em;
+      page-break-inside: avoid;
+      padding-left: 0.5em;
+      border-left: 2px solid #e2e8f0;
+      padding-left: 1em;
+    }
+    .job-header {
+      margin-bottom: 0.4em;
+    }
+    .job-title {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #1a202c;
+      display: inline;
+    }
+    .job-company {
+      font-size: 11pt;
+      font-weight: 400;
+      color: #4a5568;
+      display: inline;
+    }
+    .job-company::before {
+      content: " at ";
+      color: #718096;
+      font-weight: 300;
+    }
+    .job-dates {
+      font-size: 10pt;
+      font-style: italic;
+      color: #718096;
+      margin-top: 0.2em;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5em;
+      margin: 0.6em 0;
+    }
+    li {
+      margin-bottom: 0.4em;
+      line-height: 1.6;
+    }
+    .columns-2 {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.6em;
+    }
+    .columns-2 .column {
+      width: 50%;
+    }
+    .columns-2 .column p {
+      margin: 0.4em 0;
+      font-size: 10pt;
+    }
+    .tech-section {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.6em;
+    }
+    .tech-column {
+      width: 50%;
+    }
+    .tech-column p {
+      margin: 0.4em 0;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-section">
+      <div class="header-left">
+        <h1>{{ name }}</h1>
+        <div class="subtitle">{{ title }}</div>
+      </div>
+      {% if contact %}
+      <div class="contact-bar">
+        {% if contact.email %}<div class="contact-item">{{ contact.email }}</div>{% endif %}
+        {% if contact.mobile %}<div class="contact-item">{{ contact.mobile }}</div>{% endif %}
+        {% if contact.location %}<div class="contact-item">{{ contact.location }}</div>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    
+    {% if summary %}
+    <div class="section">
+      <h2>Summary</h2>
+      <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+    
+    {% if highlights %}
+    <div class="section">
+      <h2>Highlights</h2>
+      {% set clean_highlights = highlights | map('string') | reject('equalto', '') | list %}
+      {% if clean_highlights %}
+      <ul>
+        {% for item in clean_highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endif %}
+    
+    {% if experience %}
+    <div class="section">
+      <h2>Professional Experience</h2>
+      {% for job in experience %}
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">{{ job.title }}</span>
+            <span class="job-company">{{ job.company }}</span>
+          </div>
+          <div class="job-dates">{{ job.dates }}</div>
+          {% set clean_bullets = job.bullets | map('string') | reject('equalto', '') | list %}
+          {% if clean_bullets %}
+          <ul>
+            {% for bullet in clean_bullets %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if General_Technologies or Security_Tools %}
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="tech-section">
+        {% if General_Technologies %}
+        <div class="tech-column">
+          <h3>General Technologies</h3>
+          {% for item in General_Technologies %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if Security_Tools %}
+        <div class="tech-column">
+          <h3>Security Tools</h3>
+          {% for item in Security_Tools %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if Security_Disciplines %}
+    <div class="section">
+      <h2>Security Disciplines</h2>
+      <div class="columns-2">
+        <div class="column">
+          {% for item in Security_Disciplines[0::2] %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+        <div class="column">
+          {% for item in Security_Disciplines[1::2] %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if Languages %}
+    <div class="section">
+      <h2>Programming Languages</h2>
+      <div class="columns-2">
+        <div class="column">
+          {% for item in Languages[0::2] %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+        <div class="column">
+          {% for item in Languages[1::2] %}
+            <p>{{ item }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if objective %}
+    <div class="section">
+      <h2>Objective</h2>
+      <p>{{ objective }}</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
+

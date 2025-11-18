@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>John Doe - Software Engineer | Full Stack Developer</title>
+  <style>
+    @page {
+      margin: 1in;
+    }
+    body {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 11pt;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      background: #fff;
+      line-height: 1.5;
+    }
+    .container {
+      width: 100%;
+    }
+    h1 {
+      font-size: 24pt;
+      font-weight: 700;
+      margin-bottom: 0.1em;
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #000;
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 0.2em;
+    }
+    h3 {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.2em;
+      margin-top: 0.5em;
+    }
+    .subtitle {
+      font-size: 11pt;
+      font-weight: 400;
+      color: #000;
+      margin-bottom: 0.5em;
+      text-align: center;
+      font-style: italic;
+    }
+    .contact-bar {
+      text-align: center;
+      font-size: 10pt;
+      color: #000;
+      margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid #000;
+    }
+    .contact-item {
+      margin: 0 0.5em;
+    }
+    .contact-item::after {
+      content: " | ";
+      color: #000;
+    }
+    .contact-item:last-child::after {
+      content: "";
+    }
+    .section {
+      margin-bottom: 1em;
+    }
+    .section p {
+      margin: 0.5em 0;
+      text-align: left;
+    }
+    .job-block {
+      margin-bottom: 1em;
+      page-break-inside: avoid;
+    }
+    .job-header {
+      margin-bottom: 0.3em;
+    }
+    .job-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #000;
+    }
+    .job-company {
+      font-size: 11pt;
+      font-weight: 400;
+      color: #000;
+      font-style: italic;
+    }
+    .job-company::before {
+      content: ", ";
+    }
+    .job-dates {
+      font-size: 10pt;
+      font-style: italic;
+      color: #000;
+      margin-top: 0.2em;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5em;
+      margin: 0.5em 0;
+    }
+    li {
+      margin-bottom: 0.3em;
+      line-height: 1.4;
+    }
+    .columns-2 {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.5em;
+    }
+    .columns-2 .column {
+      width: 50%;
+    }
+    .columns-2 .column p {
+      margin: 0.3em 0;
+      font-size: 10pt;
+    }
+    .tech-section {
+      display: flex;
+      gap: 2em;
+      margin-top: 0.5em;
+    }
+    .tech-column {
+      width: 50%;
+    }
+    .tech-column p {
+      margin: 0.3em 0;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>John Doe</h1>
+    <div class="subtitle">Software Engineer | Full Stack Developer</div>
+    
+    
+    <div class="contact-bar">
+      <span class="contact-item">john.doe@example.com</span>
+      <span class="contact-item">555.123.4567</span>
+      <span class="contact-item">San Francisco, CA</span>
+    </div>
+    
+    
+    
+    <div class="section">
+      <h2>Summary</h2>
+      <p>Experienced software engineer with 5+ years building scalable web applications.  Passionate about clean code, test-driven development, and modern JavaScript frameworks.
+</p>
+    </div>
+    
+    
+    
+    
+    
+    <div class="section">
+      <h2>Professional Experience</h2>
+      
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Senior Software Engineer</span>
+            <span class="job-company">Tech Company Inc.</span>
+          </div>
+          <div class="job-dates">Jan 2020 – Present</div>
+          
+          
+          <ul>
+            
+              <li>Led development of microservices architecture, reducing deployment time by 60%</li>
+            
+              <li>Built RESTful APIs serving 1M+ requests per day with 99.9% uptime</li>
+            
+              <li>Mentored 3 junior developers and established code review best practices</li>
+            
+              <li>Reduced application load time by 40% through performance optimization</li>
+            
+          </ul>
+          
+        </div>
+      
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Software Engineer</span>
+            <span class="job-company">Startup Co.</span>
+          </div>
+          <div class="job-dates">Jun 2018 – Dec 2019</div>
+          
+          
+          <ul>
+            
+              <li>Developed responsive web applications using React and Node.js</li>
+            
+              <li>Implemented CI/CD pipelines reducing deployment time from hours to minutes</li>
+            
+              <li>Collaborated with product team to deliver features on time and within budget</li>
+            
+          </ul>
+          
+        </div>
+      
+        <div class="job-block">
+          <div class="job-header">
+            <span class="job-title">Junior Developer</span>
+            <span class="job-company">Agency LLC</span>
+          </div>
+          <div class="job-dates">Jan 2017 – May 2018</div>
+          
+          
+          <ul>
+            
+              <li>Built client websites using HTML, CSS, and JavaScript</li>
+            
+              <li>Maintained legacy codebase and fixed critical bugs</li>
+            
+              <li>Participated in agile development processes</li>
+            
+          </ul>
+          
+        </div>
+      
+    </div>
+    
+    
+    
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="tech-section">
+        
+        <div class="tech-column">
+          <h3>General Technologies</h3>
+          
+            <p>JavaScript</p>
+          
+            <p>Python</p>
+          
+            <p>React</p>
+          
+            <p>Node.js</p>
+          
+            <p>AWS</p>
+          
+            <p>Docker</p>
+          
+            <p>Kubernetes</p>
+          
+            <p>PostgreSQL</p>
+          
+            <p>MongoDB</p>
+          
+            <p>Git</p>
+          
+        </div>
+        
+        
+        <div class="tech-column">
+          <h3>Security Tools</h3>
+          
+            <p>OWASP ZAP</p>
+          
+            <p>Snyk</p>
+          
+            <p>Burp Suite</p>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    
+    <div class="section">
+      <h2>Security Disciplines</h2>
+      <div class="columns-2">
+        <div class="column">
+          
+            <p>Application Security</p>
+          
+            <p>Security Automation</p>
+          
+        </div>
+        <div class="column">
+          
+            <p>Cloud Security</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="section">
+      <h2>Programming Languages</h2>
+      <div class="columns-2">
+        <div class="column">
+          
+            <p>Python</p>
+          
+            <p>TypeScript</p>
+          
+        </div>
+        <div class="column">
+          
+            <p>JavaScript</p>
+          
+            <p>Java</p>
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Output files
+outputs/**
+!outputs/.gitkeep
+*.html
+*.pdf
+*.tex
+*_ats_report.txt
+
+# Examples folder (keep examples for documentation)
+!examples/
+!examples/*.html
+!examples/*.pdf
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Archives and backups
+*.zip
+*.tar.gz
+*.rar
+Archive/
+archive/
+**/Archive/
+**/archive/
+*.old
+*.bak
+*.backup
+*~
+
+# Template backups
+*.j2-old
+*.j2.zip
+
+# Font files (keep directory, ignore contents)
+fonts/**
+!fonts/.gitkeep
+
+# Personal config (no longer used - name comes from resume YAML files)
+config.yml
+
+# Personal resume data files
+data/personal/
+
+# Personal templates
+templates/html/personal/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+

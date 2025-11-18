@@ -1,0 +1,64 @@
+name: John Doe
+title: Software Engineer | Full Stack Developer
+contact:
+  location: San Francisco, CA
+  mobile: 555.123.4567
+  email: john.doe@example.com
+summary: >
+  Experienced software engineer with 5+ years building scalable web applications. 
+  Passionate about clean code, test-driven development, and modern JavaScript frameworks.
+
+experience:
+  - title: Senior Software Engineer
+    company: Tech Company Inc.
+    dates: Jan 2020 – Present
+    bullets:
+      - Led development of microservices architecture, reducing deployment time by 60%
+      - Built RESTful APIs serving 1M+ requests per day with 99.9% uptime
+      - Mentored 3 junior developers and established code review best practices
+      - Reduced application load time by 40% through performance optimization
+
+  - title: Software Engineer
+    company: Startup Co.
+    dates: Jun 2018 – Dec 2019
+    bullets:
+      - Developed responsive web applications using React and Node.js
+      - Implemented CI/CD pipelines reducing deployment time from hours to minutes
+      - Collaborated with product team to deliver features on time and within budget
+
+  - title: Junior Developer
+    company: Agency LLC
+    dates: Jan 2017 – May 2018
+    bullets:
+      - Built client websites using HTML, CSS, and JavaScript
+      - Maintained legacy codebase and fixed critical bugs
+      - Participated in agile development processes
+
+General_Technologies:
+  - JavaScript
+  - Python
+  - React
+  - Node.js
+  - AWS
+  - Docker
+  - Kubernetes
+  - PostgreSQL
+  - MongoDB
+  - Git
+
+Security_Disciplines:
+  - Application Security
+  - Cloud Security
+  - Security Automation
+
+Languages:
+  - Python
+  - JavaScript
+  - TypeScript
+  - Java
+
+Security_Tools:
+  - OWASP ZAP
+  - Snyk
+  - Burp Suite
+
