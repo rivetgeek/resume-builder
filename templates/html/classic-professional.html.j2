@@ -107,8 +107,8 @@
       margin-top: 0.2em;
     }
     ul {
-      list-style-type: disc;
-      padding-left: 1.5em;
+      list-style-type: none;
+      padding-left: 0;
       margin: 0.5em 0;
     }
     li {
@@ -165,13 +165,7 @@
     <div class="section">
       <h2>Highlights</h2>
       {% set clean_highlights = highlights | map('string') | reject('equalto', '') | list %}
-      {% if clean_highlights %}
-      <ul>
-        {% for item in clean_highlights %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
+      {% if clean_highlights %}<ul>{% for item in clean_highlights %}<li>• {{ item }}</li>{% endfor %}</ul>{% endif %}
     </div>
     {% endif %}
     
@@ -186,13 +180,7 @@
           </div>
           <div class="job-dates">{{ job.dates }}</div>
           {% set clean_bullets = job.bullets | map('string') | reject('equalto', '') | list %}
-          {% if clean_bullets %}
-          <ul>
-            {% for bullet in clean_bullets %}
-              <li>{{ bullet }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+          {% if clean_bullets %}<ul>{% for bullet in clean_bullets %}<li>• {{ bullet }}</li>{% endfor %}</ul>{% endif %}
         </div>
       {% endfor %}
     </div>
