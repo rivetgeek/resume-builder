@@ -83,28 +83,24 @@
       margin-bottom: 1em;
       page-break-inside: avoid;
     }
-    .job-header {
-      margin-bottom: 0.3em;
-    }
     .job-title {
       font-size: 11pt;
       font-weight: 700;
       color: #000;
+      margin-bottom: 0.2em;
     }
     .job-company {
       font-size: 11pt;
       font-weight: 400;
       color: #000;
       font-style: italic;
-    }
-    .job-company::before {
-      content: ", ";
+      margin-bottom: 0.2em;
     }
     .job-dates {
       font-size: 10pt;
       font-style: italic;
       color: #000;
-      margin-top: 0.2em;
+      margin-bottom: 0.5em;
     }
     ul {
       list-style-type: none;
@@ -174,10 +170,8 @@
       <h2>Professional Experience</h2>
       {% for job in experience %}
         <div class="job-block">
-          <div class="job-header">
-            <span class="job-title">{{ job.title }}</span>
-            <span class="job-company">{{ job.company }}</span>
-          </div>
+          <div class="job-title">{{ job.title }}</div>
+          <div class="job-company">{{ job.company }}</div>
           <div class="job-dates">{{ job.dates }}</div>
           {% set clean_bullets = job.bullets | map('string') | reject('equalto', '') | list %}
           {% if clean_bullets %}<ul>{% for bullet in clean_bullets %}<li>• {{ bullet }}</li>{% endfor %}</ul>{% endif %}
