@@ -93,6 +93,15 @@ data/personal/
 # Personal templates
 templates/html/personal/
 
+# Web
+web/node_modules/
+web/.next/
+web/out/
+
+# Local env + DB
+.env
+db/*.db
+
 # Logs
 *.log
 logs/

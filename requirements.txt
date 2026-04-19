@@ -1,11 +1,24 @@
 # Resume Builder Dependencies
+# Use Python 3.12–3.14. For 3.14, pydantic must be >=2.12 (wheels); older pins fail to build pydantic-core.
 
 # Core templating and data processing
 jinja2==3.1.6
 pyyaml==6.0.2
 
-# PDF generation 
+# PDF generation
 weasyprint>=60.0
 
+# Web API (v2)
+fastapi>=0.115.6,<0.137
+uvicorn[standard]>=0.32.1,<0.35
+python-dotenv>=1.0.0
+pydantic>=2.12,<3
+argon2-cffi==23.1.0
+PyJWT==2.10.1
+python-multipart==0.0.17
+beautifulsoup4==4.12.3
+python-docx==1.1.2
+
 # Testing
-pytest>=7.0.0 
+pytest>=7.0.0
+httpx==0.28.1

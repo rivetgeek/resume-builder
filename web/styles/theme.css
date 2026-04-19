@@ -1,0 +1,21 @@
+:root {
+  --color-cream: #f5f1e8;
+  --color-charcoal: #2a2a2a;
+  --color-muted: #6b6b6b;
+  --color-border: #d4cebf;
+  --color-accent: #2a2a2a;
+  --color-accent-fg: #f5f1e8;
+  --color-bg: var(--color-cream);
+  --color-fg: var(--color-charcoal);
+}
+
+.dark {
+  --color-cream: #1e1e1e;
+  --color-charcoal: #d0d0d0;
+  --color-muted: #8a8a8a;
+  --color-border: #333333;
+  --color-accent: #d0d0d0;
+  --color-accent-fg: #1e1e1e;
+  --color-bg: #1e1e1e;
+  --color-fg: #d0d0d0;
+}

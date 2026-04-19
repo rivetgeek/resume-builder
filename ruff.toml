@@ -1,0 +1,5 @@
+target-version = "py312"
+src = ["."]
+
+[lint.per-file-ignores]
+"tests/api/conftest.py" = ["E402"]
